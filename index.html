@@ -1,0 +1,73 @@
+<!--
+File: index.html
+GUI Assignment: Creating an Interactive Dynamic Table
+Kalin Toussaint, UMass Lowell Computer Science, Kalin_Toussaint@student.uml.edu
+Copyright (c) 2024 by Kalin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by KT on June 17, 2024
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body>
+<!-- Main container for the content -->
+<div class="container">
+    <!-- Welcome message -->
+    <header>
+        <h1>Welcome to My Multiplication Table</h1>
+        <p>Please enter four numbers below from -50 to 50</p>
+    </header>
+
+    <!-- Heading of the application -->
+    <h2>Multiplication Table Generator</h2>
+
+    <!-- Tabbed interface for the form and tables -->
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab-form">Input Parameters</a></li>
+        </ul>
+        <div id="tab-form">
+            <!-- Container for the form elements -->
+            <div class="form-container">
+                <!-- Form to take user inputs for generating the table -->
+                <form class="multiplication-form" id="multiplication-form">
+                    <label for="start-horizontal">Start Horizontal Numbers:</label>
+                    <input type="text" id="start-horizontal" name="start-horizontal" placeholder="Enter a number from -50 to 50" required>
+                    <div id="slider-start-horizontal"></div>
+
+                    <label for="end-horizontal">End Horizontal Numbers:</label>
+                    <input type="text" id="end-horizontal" name="end-horizontal" placeholder="Enter a number from -50 to 50" required>
+                    <div id="slider-end-horizontal"></div>
+
+                    <label for="start-vertical">Start Vertical Numbers:</label>
+                    <input type="text" id="start-vertical" name="start-vertical" placeholder="Enter a number from -50 to 50" required>
+                    <div id="slider-start-vertical"></div>
+
+                    <label for="end-vertical">End Vertical Numbers:</label>
+                    <input type="text" id="end-vertical" name="end-vertical" placeholder="Enter a number from -50 to 50" required>
+                    <div id="slider-end-vertical"></div>
+
+                    <button type="submit">Generate Table</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons for managing tabs -->
+    <button id="create-new-tab">Create New Tab</button>
+    <button id="delete-selected-tabs">Delete Selected Tabs</button>
+</div>
+
+<!-- JavaScript file to handle form submission and table generation -->
+<script src="index.js"></script>
+</body>
+</html>
